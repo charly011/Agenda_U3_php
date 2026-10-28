@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Paleta de Colores | AgendaWeb</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        :root {
+
+            --fondo: #F6FAF8;
+            --superficie: #FFFFFF;
+
+            --texto-principal: #17312B;
+            --texto-secundario: #4B625C;
+
+            --acento: #176B5B;
+            --acento-hover: #125648;
+
+            --borde: #C8D8D3;
+            --acento-suave: #E5F1ED;
+
+            --titulo: 'Manrope', sans-serif;
+            --cuerpo: 'Inter', sans-serif;
+
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            min-height: 100vh;
+
+            background: var(--fondo);
+
+            color: var(--texto-principal);
+
+            font-family: var(--cuerpo);
+
+        }
+
+
+        /* =====================================
+           HEADER
+           ===================================== */
+
+        header {
+
+            padding: 24px 7%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            background: var(--superficie);
+
+            border-bottom: 1px solid var(--borde);
+
+        }
+
+
+        .logo {
+
+            font-family: var(--titulo);
+
+            font-size: 25px;
+
+            font-weight: 700;
+
+        }
+
+
+        .logo span {
+
+            color: var(--acento);
+
+        }
+
+
+        .etiqueta {
+
+            padding: 8px 14px;
+
+            background: var(--acento-suave);
+
+            color: var(--acento);
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+        }
+
+
+        /* =====================================
+           CONTENEDOR
+           ===================================== */
+
+        main {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 65px 25px;
+
+        }
+
+
+        .introduccion {
+
+            text-align: center;
+
+            max-width: 700px;
+
+            margin: 0 auto 50px;
+
+        }
+
+
+        .introduccion .pequeno {
+
+            color: var(--acento);
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .introduccion h1 {
+
+            margin: 12px 0;
+
+            font-family: var(--titulo);
+
+            font-size: 42px;
+
+        }
+
+
+        .introduccion h1 span {
+
+            color: var(--acento);
+
+        }
+
+
+        .introduccion p {
+
+            margin: 0;
+
+            color: var(--texto-secundario);
+
+            font-size: 16px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =====================================
+           PALETA
+           ===================================== */
+
+        .titulo-seccion {
+
+            margin-bottom: 20px;
+
+            font-family: var(--titulo);
+
+            font-size: 22px;
+
+        }
+
+
+        .paleta {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 18px;
+
+        }
+
+
+        .color {
+
+            overflow: hidden;
+
+            background: var(--superficie);
+
+            border: 1px solid var(--borde);
+
+            border-radius: 14px;
+
+            transition: 0.25s;
+
+        }
+
+
+        .color:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 12px 25px rgba(23, 49, 43, 0.10);
+
+        }
+
+
+        .muestra {
+
+            height: 150px;
+
+        }
+
+
+        .informacion {
+
+            padding: 17px;
+
+        }
+
+
+        .informacion h3 {
+
+            margin: 0 0 5px;
+
+            font-family: var(--titulo);
+
+            font-size: 15px;
+
+        }
+
+
+        .hex {
+
+            margin: 0;
+
+            color: var(--texto-secundario);
+
+            font-family: monospace;
+
+            font-size: 13px;
+
+        }
+
+
+        .uso {
+
+            margin-top: 8px;
+
+            color: var(--texto-secundario);
+
+            font-size: 12px;
+
+            line-height: 1.5;
+
+        }
+
+
+        /* =====================================
+           COLORES
+           ===================================== */
+
+        .color-fondo .muestra {
+            background: #F6FAF8;
+        }
+
+        .color-superficie .muestra {
+            background: #FFFFFF;
+        }
+
+        .color-texto .muestra {
+            background: #17312B;
+        }
+
+        .color-secundario .muestra {
+            background: #4B625C;
+        }
+
+        .color-acento .muestra {
+            background: #176B5B;
+        }
+
+        .color-hover .muestra {
+            background: #125648;
+        }
+
+        .color-borde .muestra {
+            background: #C8D8D3;
+        }
+
+        .color-suave .muestra {
+            background: #E5F1ED;
+        }
+
+
+        /* =====================================
+           DEMOSTRACIÓN
+           ===================================== */
+
+        .demo {
+
+            margin-top: 55px;
+
+            padding: 30px;
+
+            background: var(--superficie);
+
+            border: 1px solid var(--borde);
+
+            border-radius: 18px;
+
+        }
+
+
+        .demo h2 {
+
+            margin-top: 0;
+
+            font-family: var(--titulo);
+
+        }
+
+
+        .demo-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 25px;
+
+            margin-top: 25px;
+
+        }
+
+
+        /* TARJETA */
+
+        .tarjeta-demo {
+
+            padding: 22px;
+
+            border: 1px solid var(--borde);
+
+            border-radius: 13px;
+
+            background: var(--fondo);
+
+        }
+
+
+        .tarjeta-demo .fecha {
+
+            display: inline-flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 58px;
+
+            height: 58px;
+
+            background: var(--acento-suave);
+
+            color: var(--acento);
+
+            border-radius: 11px;
+
+        }
+
+
+        .fecha strong {
+
+            font-family: var(--titulo);
+
+            font-size: 20px;
+
+        }
+
+
+        .fecha small {
+
+            font-size: 9px;
+
+        }
+
+
+        .tarjeta-demo h3 {
+
+            margin: 15px 0 5px;
+
+            font-family: var(--titulo);
+
+        }
+
+
+        .tarjeta-demo p {
+
+            margin: 0;
+
+            color: var(--texto-secundario);
+
+            font-size: 13px;
+
+            line-height: 1.5;
+
+        }
+
+
+        /* BOTONES */
+
+        .botones-demo {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 15px;
+
+        }
+
+
+        .btn {
+
+            padding: 13px 18px;
+
+            border-radius: 9px;
+
+            border: none;
+
+            font-family: var(--cuerpo);
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+        }
+
+
+        .btn-principal {
+
+            background: var(--acento);
+
+            color: white;
+
+        }
+
+
+        .btn-hover {
+
+            background: var(--acento-hover);
+
+            color: white;
+
+        }
+
+
+        .btn-secundario {
+
+            background: var(--acento-suave);
+
+            color: var(--acento);
+
+        }
+
+
+        .btn-borde {
+
+            background: white;
+
+            color: var(--texto-principal);
+
+            border: 1px solid var(--borde);
+
+        }
+
+
+        /* =====================================
+           TIPOGRAFÍA
+           ===================================== */
+
+        .tipografia {
+
+            margin-top: 55px;
+
+        }
+
+
+        .tipografia-contenido {
+
+            padding: 30px;
+
+            background: var(--superficie);
+
+            border: 1px solid var(--borde);
+
+            border-radius: 18px;
+
+        }
+
+
+        .titulo-ejemplo {
+
+            margin: 0;
+
+            font-family: var(--titulo);
+
+            font-size: 30px;
+
+        }
+
+
+        .texto-ejemplo {
+
+            margin: 10px 0 0;
+
+            color: var(--texto-secundario);
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =====================================
+           FOOTER
+           ===================================== */
+
+        footer {
+
+            margin-top: 30px;
+
+            padding: 25px;
+
+            text-align: center;
+
+            background: var(--superficie);
+
+            border-top: 1px solid var(--borde);
+
+            color: var(--texto-secundario);
+
+            font-size: 13px;
+
+        }
+
+
+        /* =====================================
+           RESPONSIVE
+           ===================================== */
+
+        @media (max-width: 850px) {
+
+            .paleta {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+            .demo-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            header {
+
+                padding: 20px;
+
+            }
+
+            .introduccion h1 {
+
+                font-size: 32px;
+
+            }
+
+            .paleta {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            main {
+
+                padding: 45px 18px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            Agenda<span>Web</span>
+
+        </div>
+
+        <div class="etiqueta">
+
+            Identidad Visual
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTENIDO -->
+
+    <main>
+
+
+        <!-- INTRODUCCIÓN -->
+
+        <section class="introduccion">
+
+            <div class="pequeno">
+                Sistema de diseño
+            </div>
+
+            <h1>
+                Agenda<span>Calm</span>
+            </h1>
+
+            <p>
+                Una identidad visual limpia, tranquila y profesional
+                diseñada para transmitir organización, claridad y
+                confianza en la gestión de eventos.
+            </p>
+
+        </section>
+
+
+        <!-- PALETA -->
+
+        <section>
+
+            <h2 class="titulo-seccion">
+                Paleta de colores
+            </h2>
+
+
+            <div class="paleta">
+
+
+                <article class="color color-fondo">
+
+                    <div class="muestra"></div>
+
+                    <div class="informacion">
+
+                        <h3>
+                            Fondo
+                        </h3>
+
+                        <p class="hex">
+                            #F6FAF8
+                        </p>
+
+                        <p class="uso">
+                            Fondo principal de la aplicación.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="color color-superficie">
+
+                    <div class="muestra"></div>
+
+                    <div class="informacion">
+
+                        <h3>
+                            Superficie
+                        </h3>
+
+                        <p class="hex">
+                            #FFFFFF
+                        </p>
+
+                        <p class="uso">
+                            Tarjetas, formularios y paneles.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="color color-texto">
+
+                    <div class="muestra"></div>
+
+                    <div class="informacion">
+
+                        <h3>
+                            Texto principal
+                        </h3>
+
+                        <p class="hex">
+                            #17312B
+                        </p>
+
+                        <p class="uso">
+                            Títulos y contenido principal.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="color color-secundario">
+
+                    <div class="muestra"></div>
+
+                    <div class="informacion">
+
+                        <h3>
+                            Texto secundario
+                        </h3>
+
+                        <p class="hex">
+                            #4B625C
+                        </p>
+
+                        <p class="uso">
+                            Descripciones y textos secundarios.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="color color-acento">
+
+                    <div class="muestra"></div>
+
+                    <div class="informacion">
+
+                        <h3>
+                            Acento principal
+                        </h3>
+
+                        <p class="hex">
+                            #176B5B
+                        </p>
+
+                        <p class="uso">
+                            Botones, enlaces y elementos destacados.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="color color-hover">
+
+                    <div class="muestra"></div>
+
+                    <div class="informacion">
+
+                        <h3>
+                            Acento hover
+                        </h3>
+
+                        <p class="hex">
+                            #125648
+                        </p>
+
+                        <p class="uso">
+                            Estado hover de botones y enlaces.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="color color-borde">
+
+                    <div class="muestra"></div>
+
+                    <div class="informacion">
+
+                        <h3>
+                            Borde
+                        </h3>
+
+                        <p class="hex">
+                            #C8D8D3
+                        </p>
+
+                        <p class="uso">
+                            Bordes, divisores y campos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="color color-suave">
+
+                    <div class="muestra"></div>
+
+                    <div class="informacion">
+
+                        <h3>
+                            Acento suave
+                        </h3>
+
+                        <p class="hex">
+                            #E5F1ED
+                        </p>
+
+                        <p class="uso">
+                            Fondos suaves y etiquetas.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- DEMOSTRACIÓN -->
+
+        <section class="demo">
+
+            <h2>
+                Aplicación de la paleta
+            </h2>
+
+            <p>
+                Así se utilizan los colores dentro de AgendaWeb.
+            </p>
+
+
+            <div class="demo-grid">
+
+
+                <!-- TARJETA -->
+
+                <div class="tarjeta-demo">
+
+                    <div class="fecha">
+
+                        <strong>
+                            29
+                        </strong>
+
+                        <small>
+                            SEP
+                        </small>
+
+                    </div>
+
+                    <h3>
+                        Reunión de equipo
+                    </h3>
+
+                    <p>
+                        Revisar avances del proyecto de AgendaWeb.
+                    </p>
+
+                </div>
+
+
+                <!-- BOTONES -->
+
+                <div class="botones-demo">
+
+                    <button class="btn btn-principal">
+                        Guardar Evento
+                    </button>
+
+                    <button class="btn btn-hover">
+                        Estado Hover
+                    </button>
+
+                    <button class="btn btn-secundario">
+                        Botón secundario
+                    </button>
+
+                    <button class="btn btn-borde">
+                        Botón con borde
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- TIPOGRAFÍA -->
+
+        <section class="tipografia">
+
+            <h2 class="titulo-seccion">
+                Tipografía
+            </h2>
+
+
+            <div class="tipografia-contenido">
+
+                <h2 class="titulo-ejemplo">
+                    Organiza tu tiempo
+                </h2>
+
+                <p class="texto-ejemplo">
+                    AgendaWeb utiliza Manrope para títulos e Inter
+                    para textos generales, creando una apariencia
+                    moderna, clara y fácil de leer.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        AgendaWeb · Sistema de Identidad Visual · 2026
+
+    </footer>
+
+
+</body>
+
+</html>

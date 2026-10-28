@@ -1,0 +1,423 @@
+/* =========================================
+   AGENDAWEB
+   AGENDA CALM
+   ========================================= */
+
+:root {
+
+    --fondo: #F6FAF8;
+    --superficie: #FFFFFF;
+
+    --texto-principal: #17312B;
+    --texto-secundario: #4B625C;
+
+    --acento: #176B5B;
+    --acento-hover: #125648;
+
+    --borde: #C8D8D3;
+    --acento-suave: #E5F1ED;
+
+    --titulo: 'Manrope', sans-serif;
+    --cuerpo: 'Inter', sans-serif;
+
+}
+
+
+/* =========================================
+   GENERAL
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--fondo);
+
+    color: var(--texto-principal);
+
+    font-family: var(--cuerpo);
+
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.header {
+
+    height: 76px;
+
+    padding: 0 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: var(--superficie);
+
+    border-bottom: 1px solid var(--borde);
+
+}
+
+
+.logo {
+
+    font-family: var(--titulo);
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    color: var(--texto-principal);
+
+}
+
+.logo span {
+
+    color: var(--acento);
+
+}
+
+
+.mi-agenda {
+
+    text-decoration: none;
+
+    color: var(--acento);
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    padding: 10px 16px;
+
+    border-radius: 9px;
+
+    transition: 0.2s;
+
+}
+
+
+.mi-agenda:hover {
+
+    background: var(--acento-suave);
+
+}
+
+
+/* =========================================
+   CONTENIDO
+   ========================================= */
+
+main {
+
+    flex: 1;
+
+    padding: 55px 20px;
+
+}
+
+
+.contenedor {
+
+    width: 100%;
+
+    max-width: 720px;
+
+    margin: auto;
+
+}
+
+
+.encabezado {
+
+    margin-bottom: 30px;
+
+}
+
+
+.encabezado h1 {
+
+    margin: 0 0 8px;
+
+    font-family: var(--titulo);
+
+    font-size: 32px;
+
+    color: var(--texto-principal);
+
+}
+
+
+.encabezado p {
+
+    margin: 0;
+
+    color: var(--texto-secundario);
+
+}
+
+
+/* =========================================
+   FORMULARIO
+   ========================================= */
+
+.formulario {
+
+    background: var(--superficie);
+
+    padding: 32px;
+
+    border: 1px solid var(--borde);
+
+    border-radius: 16px;
+
+    box-shadow: 0 8px 25px rgba(23, 49, 43, 0.05);
+
+}
+
+
+.campo {
+
+    margin-bottom: 22px;
+
+}
+
+
+.campo label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: var(--texto-principal);
+
+}
+
+
+.campo input,
+.campo select,
+.campo textarea {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid var(--borde);
+
+    border-radius: 9px;
+
+    background: #FFFFFF;
+
+    color: var(--texto-principal);
+
+    font-family: var(--cuerpo);
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+
+}
+
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+
+    border-color: var(--acento);
+
+    box-shadow: 0 0 0 3px var(--acento-suave);
+
+}
+
+
+.campo textarea {
+
+    resize: vertical;
+
+    min-height: 120px;
+
+}
+
+
+/* =========================================
+   FECHA / HORA
+   ========================================= */
+
+.fila {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+}
+
+
+/* =========================================
+   BOTONES
+   ========================================= */
+
+.acciones {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    margin-top: 10px;
+
+}
+
+
+.btn-limpiar,
+.btn-guardar {
+
+    padding: 12px 20px;
+
+    border-radius: 9px;
+
+    font-family: var(--cuerpo);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.btn-limpiar {
+
+    background: transparent;
+
+    color: var(--texto-secundario);
+
+    border: 1px solid var(--borde);
+
+}
+
+
+.btn-limpiar:hover {
+
+    background: var(--fondo);
+
+}
+
+
+.btn-guardar {
+
+    background: var(--acento);
+
+    color: white;
+
+    border: none;
+
+}
+
+
+.btn-guardar:hover {
+
+    background: var(--acento-hover);
+
+    transform: translateY(-1px);
+
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+
+    padding: 22px;
+
+    text-align: center;
+
+    color: var(--texto-secundario);
+
+    font-size: 13px;
+
+    border-top: 1px solid var(--borde);
+
+    background: var(--superficie);
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .header {
+
+        padding: 0 20px;
+
+    }
+
+    main {
+
+        padding: 35px 15px;
+
+    }
+
+    .encabezado h1 {
+
+        font-size: 26px;
+
+    }
+
+    .formulario {
+
+        padding: 22px;
+
+    }
+
+    .fila {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+    }
+
+    .acciones {
+
+        flex-direction: column;
+
+    }
+
+    .btn-limpiar,
+    .btn-guardar {
+
+        width: 100%;
+
+    }
+
+}

@@ -1,0 +1,763 @@
+/* =========================================
+   AGENDAWEB
+   AGENDA CALM
+   INDEX
+   ========================================= */
+
+:root {
+
+    --fondo: #F6FAF8;
+    --superficie: #FFFFFF;
+
+    --texto-principal: #17312B;
+    --texto-secundario: #4B625C;
+
+    --acento: #176B5B;
+    --acento-hover: #125648;
+
+    --borde: #C8D8D3;
+    --acento-suave: #E5F1ED;
+
+    --titulo: 'Manrope', sans-serif;
+    --cuerpo: 'Inter', sans-serif;
+
+}
+
+
+/* =========================================
+   GENERAL
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--fondo);
+
+    color: var(--texto-principal);
+
+    font-family: var(--cuerpo);
+
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.header {
+
+    height: 76px;
+
+    padding: 0 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: var(--superficie);
+
+    border-bottom: 1px solid var(--borde);
+
+}
+
+
+.logo {
+
+    font-family: var(--titulo);
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+}
+
+
+.logo span {
+
+    color: var(--acento);
+
+}
+
+
+/* =========================================
+   BOTÓN AGREGAR
+   ========================================= */
+
+.btn-agregar {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 11px 17px;
+
+    background: var(--acento);
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+
+}
+
+
+.btn-agregar:hover {
+
+    background: var(--acento-hover);
+
+    transform: translateY(-1px);
+
+}
+
+
+.btn-agregar .icono {
+
+    font-size: 19px;
+
+    line-height: 1;
+
+}
+
+
+/* =========================================
+   CONTENIDO
+   ========================================= */
+
+main {
+
+    flex: 1;
+
+    padding: 50px 20px;
+
+}
+
+
+.contenedor {
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+}
+
+
+/* =========================================
+   ENCABEZADO
+   ========================================= */
+
+.encabezado-agenda {
+
+    margin-bottom: 30px;
+
+}
+
+
+.encabezado-agenda h1 {
+
+    margin: 0 0 7px;
+
+    font-family: var(--titulo);
+
+    font-size: 32px;
+
+}
+
+
+.encabezado-agenda p {
+
+    margin: 0;
+
+    color: var(--texto-secundario);
+
+}
+
+
+/* =========================================
+   EVENTOS
+   ========================================= */
+
+.eventos {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+
+.evento {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding: 22px;
+
+    background: var(--superficie);
+
+    border: 1px solid var(--borde);
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(23, 49, 43, 0.04);
+
+    transition: 0.2s;
+
+}
+
+
+.evento:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 25px rgba(23, 49, 43, 0.08);
+
+}
+
+
+/* =========================================
+   FECHA
+   ========================================= */
+
+.fecha-evento {
+
+    width: 68px;
+
+    min-width: 68px;
+
+    height: 68px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--acento-suave);
+
+    border-radius: 12px;
+
+}
+
+
+.fecha-evento .dia {
+
+    font-family: var(--titulo);
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    color: var(--acento);
+
+    line-height: 1;
+
+}
+
+
+.fecha-evento .mes {
+
+    margin-top: 5px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    color: var(--texto-secundario);
+
+}
+
+
+/* =========================================
+   INFORMACIÓN
+   ========================================= */
+
+.informacion-evento {
+
+    flex: 1;
+
+}
+
+
+.evento-superior {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+}
+
+
+.evento-superior h2 {
+
+    margin: 0;
+
+    font-family: var(--titulo);
+
+    font-size: 18px;
+
+    color: var(--texto-principal);
+
+}
+
+
+.categoria {
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: var(--acento-suave);
+
+    color: var(--acento);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+
+.hora {
+
+    margin-top: 8px;
+
+    color: var(--acento);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+.descripcion {
+
+    margin: 10px 0 0;
+
+    color: var(--texto-secundario);
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================
+   SIN EVENTOS
+   ========================================= */
+
+.sin-eventos {
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+    background: var(--superficie);
+
+    border: 1px solid var(--borde);
+
+    border-radius: 16px;
+
+}
+
+
+.icono-vacio {
+
+    width: 55px;
+
+    height: 55px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--acento-suave);
+
+    color: var(--acento);
+
+    font-size: 28px;
+
+}
+
+
+.sin-eventos h2 {
+
+    margin: 18px 0 7px;
+
+    font-family: var(--titulo);
+
+    font-size: 20px;
+
+}
+
+
+.sin-eventos p {
+
+    margin: 0 0 20px;
+
+    color: var(--texto-secundario);
+
+    font-size: 14px;
+
+}
+
+
+.btn-primer-evento {
+
+    display: inline-block;
+
+    padding: 11px 18px;
+
+    background: var(--acento);
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+.btn-primer-evento:hover {
+
+    background: var(--acento-hover);
+
+}
+
+
+/* =========================================
+   MENSAJE FLOTANTE
+   ========================================= */
+
+.mensaje-flotante {
+
+    position: fixed;
+
+    top: 25px;
+
+    right: 25px;
+
+    z-index: 9999;
+
+    min-width: 330px;
+
+    max-width: 400px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 16px 18px;
+
+    background: var(--superficie);
+
+    border: 1px solid var(--borde);
+
+    border-radius: 14px;
+
+    box-shadow: 0 10px 30px rgba(23, 49, 43, 0.15);
+
+    animation: aparecerMensaje 0.4s ease;
+
+}
+
+
+/* ÉXITO */
+
+.mensaje-exito {
+
+    border-left: 5px solid var(--acento);
+
+}
+
+
+/* ERROR */
+
+.mensaje-error {
+
+    border-left: 5px solid #c0392b;
+
+}
+
+
+/* ICONO */
+
+.icono-mensaje {
+
+    width: 38px;
+
+    height: 38px;
+
+    min-width: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--acento-suave);
+
+    color: var(--acento);
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+}
+
+
+/* TEXTO */
+
+.mensaje-flotante strong {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--texto-principal);
+
+    font-size: 15px;
+
+}
+
+
+.mensaje-flotante p {
+
+    margin: 0;
+
+    color: var(--texto-secundario);
+
+    font-size: 13px;
+
+}
+
+
+/* CERRAR */
+
+.mensaje-flotante button {
+
+    margin-left: auto;
+
+    padding: 4px;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--texto-secundario);
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+}
+
+
+.mensaje-flotante button:hover {
+
+    color: var(--texto-principal);
+
+}
+
+
+/* =========================================
+   ANIMACIONES
+   ========================================= */
+
+@keyframes aparecerMensaje {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateX(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+}
+
+
+.mensaje-saliendo {
+
+    animation: desaparecerMensaje 0.4s ease forwards;
+
+}
+
+
+@keyframes desaparecerMensaje {
+
+    from {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+    to {
+
+        opacity: 0;
+
+        transform: translateX(30px);
+
+    }
+
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+
+    padding: 22px;
+
+    text-align: center;
+
+    color: var(--texto-secundario);
+
+    font-size: 13px;
+
+    border-top: 1px solid var(--borde);
+
+    background: var(--superficie);
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .header {
+
+        padding: 0 20px;
+
+    }
+
+    main {
+
+        padding: 35px 15px;
+
+    }
+
+    .encabezado-agenda h1 {
+
+        font-size: 26px;
+
+    }
+
+    .evento {
+
+        padding: 17px;
+
+        gap: 14px;
+
+    }
+
+    .fecha-evento {
+
+        width: 58px;
+
+        min-width: 58px;
+
+        height: 58px;
+
+    }
+
+    .fecha-evento .dia {
+
+        font-size: 21px;
+
+    }
+
+    .evento-superior {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 7px;
+
+    }
+
+    .mensaje-flotante {
+
+        top: 15px;
+
+        left: 15px;
+
+        right: 15px;
+
+        min-width: auto;
+
+        max-width: none;
+
+    }
+
+}
