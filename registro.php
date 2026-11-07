@@ -7,7 +7,7 @@ $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nombre = trim($_POST['nombre'] ?? '');
-    $correo = trim($_POST['correo'] ?? '');
+    $correo = strtolower(trim($_POST['correo'] ?? ''));
     $clave = $_POST['clave'] ?? '';
     $confirmar = $_POST['confirmar'] ?? '';
 
